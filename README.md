@@ -8,7 +8,7 @@ Chinese web novel writing toolkit - Claude Code plugin marketplace.
 
 ### novel-learning-system (v1.0.0)
 
-Learn and deconstruct Chinese web novels (up to 5M characters) across 4 dimensions:
+Learn and deconstruct Chinese web novels (up to 15M characters) across 4 dimensions:
 
 从专业网文大神视角拆解小说，四维分析构建全维度知识库：
 

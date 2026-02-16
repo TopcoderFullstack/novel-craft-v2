@@ -11,7 +11,7 @@
     {
       "name": "novel-learning-system",
       "source": "./plugins/novel-learning-system",
-      "description": "Learn and deconstruct Chinese web novels (up to 5M chars) across 4 dimensions with Neon PostgreSQL knowledge base | 中文网络小说四维分析学习系统",
+      "description": "Learn and deconstruct Chinese web novels (up to 15M chars) across 4 dimensions with Neon PostgreSQL knowledge base | 中文网络小说四维分析学习系统",
       "version": "1.0.0",
       "category": "writing",
       "tags": ["novel", "chinese", "writing", "analysis", "neon", "postgresql"]

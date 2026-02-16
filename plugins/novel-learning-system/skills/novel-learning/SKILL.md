@@ -1,7 +1,7 @@
 ---
-name: learn-novel
+name: novel-learning
 description: 学习一本网络小说，拆解为文笔风格、叙事结构、人物设计、世界观设定四个维度的知识库 | Learn a web novel and decompose it into a 4-dimension knowledge base
-user-invocable: true
+user-invokable: true
 ---
 
 # /learn-novel — 网络小说学习系统
@@ -14,7 +14,7 @@ user-invocable: true
 
 ## 功能 | What It Does
 
-从一本中文网络小说（最大500万字）中学习并构建全维度知识库：
+从一本中文网络小说（最大1500万字）中学习并构建全维度知识库：
 
 1. **文件解析**: 支持 .txt / .md / .epub / .docx 格式，自动检测编码
 2. **章节切分**: 自动检测 第X章/第X卷 等章节标记，切分为 卷→章→场景 层级
