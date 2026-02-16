@@ -1,0 +1,29 @@
+{
+  "name": "novel-learning-system",
+  "version": "1.0.0",
+  "description": "中文网络小说学习系统 — 从专业网文大神视角拆解小说的文笔风格、叙事结构、人物设计、世界观设定，构建全维度知识库 | Chinese web novel analysis system with 4-dimension knowledge base",
+  "author": {
+    "name": "NovelCraft"
+  },
+  "homepage": "https://github.com/topcoderfullstack/novel-craft-v2",
+  "repository": "https://github.com/topcoderfullstack/novel-craft-v2",
+  "license": "MIT",
+  "keywords": [
+    "novel",
+    "chinese",
+    "web-novel",
+    "analysis",
+    "writing",
+    "knowledge-base",
+    "neon",
+    "postgresql"
+  ],
+  "skills": "./skills/",
+  "agents": [
+    "./agents/pipeline-coordinator.md",
+    "./agents/style-analyzer.md",
+    "./agents/narrative-analyzer.md",
+    "./agents/character-analyzer.md",
+    "./agents/world-analyzer.md"
+  ]
+}

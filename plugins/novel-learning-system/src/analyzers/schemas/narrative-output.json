@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "NarrativeAnalysisOutput",
+  "description": "叙事结构分析输出 Schema",
+  "type": "object",
+  "required": ["pacing_type", "pacing_score", "chapter_function", "chapter_summary"],
+  "properties": {
+    "pacing_type": { "type": "string", "enum": ["setup", "rising", "climax", "falling", "resolution"] },
+    "pacing_score": { "type": "number", "minimum": 0, "maximum": 1 },
+    "suspense_hooks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": { "type": "string", "enum": ["cliffhanger", "mystery", "foreshadow", "promise"] },
+          "description": { "type": "string" },
+          "target_chapter": { "type": ["integer", "null"] }
+        },
+        "required": ["type", "description"]
+      }
+    },
+    "cliffhanger_score": { "type": "number", "minimum": 0, "maximum": 1 },
+    "foreshadowing_planted": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "description": { "type": "string" }
+        },
+        "required": ["id", "description"]
+      }
+    },
+    "foreshadowing_resolved": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "key_events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "event": { "type": "string" },
+          "importance": { "type": "string", "enum": ["critical", "major", "minor"] },
+          "participants": { "type": "array", "items": { "type": "string" } }
+        },
+        "required": ["event", "importance"]
+      }
+    },
+    "conflict_type": { "type": "string", "enum": ["internal", "interpersonal", "external", "none"] },
+    "conflict_intensity": { "type": "number", "minimum": 0, "maximum": 1 },
+    "chapter_function": { "type": "string", "enum": ["introduction", "development", "twist", "climax", "transition", "filler"] },
+    "chapter_summary": { "type": "string", "maxLength": 500 }
+  }
+}

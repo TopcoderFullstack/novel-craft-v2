@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "WorldBuildingAnalysisOutput",
+  "description": "世界观设定分析输出 Schema",
+  "type": "object",
+  "properties": {
+    "power_system_updates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["system_name"],
+        "properties": {
+          "system_name": { "type": "string" },
+          "new_tiers": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "rank": { "type": "integer" },
+                "name": { "type": "string" },
+                "description": { "type": "string" }
+              },
+              "required": ["name"]
+            }
+          },
+          "new_rules": { "type": ["string", "null"] },
+          "is_update": { "type": "boolean" }
+        }
+      }
+    },
+    "world_rules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["category", "rule_name", "description"],
+        "properties": {
+          "category": { "type": "string", "enum": ["physics", "magic", "social", "economic", "political"] },
+          "rule_name": { "type": "string" },
+          "description": { "type": "string" },
+          "implications": { "type": ["string", "null"] },
+          "is_golden_finger": { "type": "boolean", "default": false }
+        }
+      }
+    },
+    "locations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "location_type"],
+        "properties": {
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "location_type": { "type": "string", "enum": ["city", "sect", "realm", "dungeon", "continent", "dimension", "wilderness", "building"] },
+          "parent_location": { "type": ["string", "null"] },
+          "importance": { "type": "string", "enum": ["major", "minor", "mentioned"] }
+        }
+      }
+    },
+    "factions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name"],
+        "properties": {
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "alignment": { "type": "string", "enum": ["protagonist", "antagonist", "neutral"] },
+          "power_rank": { "type": ["integer", "null"] }
+        }
+      }
+    },
+    "golden_finger": {
+      "type": ["object", "null"],
+      "properties": {
+        "name": { "type": "string" },
+        "abilities": { "type": "array", "items": { "type": "string" } },
+        "limitations": { "type": "array", "items": { "type": "string" } },
+        "evolution": { "type": ["string", "null"] }
+      }
+    }
+  }
+}

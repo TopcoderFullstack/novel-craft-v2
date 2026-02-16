@@ -1,0 +1,20 @@
+{
+  "name": "novel-craft-v2",
+  "owner": {
+    "name": "NovelCraft"
+  },
+  "metadata": {
+    "description": "Chinese web novel writing toolkit - plugins for learning from and creating web novels | 中文网络小说创作工具集",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "novel-learning-system",
+      "source": "./plugins/novel-learning-system",
+      "description": "Learn and deconstruct Chinese web novels (up to 5M chars) across 4 dimensions with Neon PostgreSQL knowledge base | 中文网络小说四维分析学习系统",
+      "version": "1.0.0",
+      "category": "writing",
+      "tags": ["novel", "chinese", "writing", "analysis", "neon", "postgresql"]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "name": "novel-learning-system",
+  "version": "0.1.0",
+  "description": "Claude Code plugin for learning and analyzing Chinese web novels (网络小说学习系统)",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch src/mcp-server/index.ts",
+    "start": "node dist/mcp-server/index.js",
+    "test": "vitest",
+    "test:parsers": "vitest run src/parsers",
+    "test:segmenter": "vitest run src/segmenter",
+    "db:schema": "tsx src/db/migrate.ts"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.0.0",
+    "chardet": "^2.1.0",
+    "epub2": "^3.0.2",
+    "mammoth": "^1.9.0",
+    "marked": "^15.0.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

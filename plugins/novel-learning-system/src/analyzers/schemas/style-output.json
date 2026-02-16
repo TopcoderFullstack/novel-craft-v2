@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "StyleAnalysisOutput",
+  "description": "文笔风格分析输出 Schema",
+  "type": "object",
+  "required": ["avg_sentence_length", "dialogue_ratio", "rhythm_score", "tension_score"],
+  "properties": {
+    "avg_sentence_length": { "type": "number", "description": "平均句长(字)" },
+    "sentence_length_variance": { "type": "number" },
+    "short_sentence_ratio": { "type": "number", "minimum": 0, "maximum": 1 },
+    "long_sentence_ratio": { "type": "number", "minimum": 0, "maximum": 1 },
+    "unique_word_ratio": { "type": "number", "minimum": 0, "maximum": 1 },
+    "classical_word_ratio": { "type": "number", "minimum": 0, "maximum": 1 },
+    "modern_slang_ratio": { "type": "number", "minimum": 0, "maximum": 1 },
+    "four_char_idiom_count": { "type": "integer", "minimum": 0 },
+    "rhetoric_devices": {
+      "type": "object",
+      "properties": {
+        "比喻": { "type": "integer" }, "排比": { "type": "integer" },
+        "夸张": { "type": "integer" }, "拟人": { "type": "integer" },
+        "反问": { "type": "integer" }, "对比": { "type": "integer" },
+        "通感": { "type": "integer" }, "借代": { "type": "integer" }
+      }
+    },
+    "dialogue_ratio": { "type": "number", "minimum": 0, "maximum": 1 },
+    "dialogue_avg_length": { "type": "number" },
+    "narration_ratio": { "type": "number", "minimum": 0, "maximum": 1 },
+    "description_ratio": { "type": "number", "minimum": 0, "maximum": 1 },
+    "paragraph_avg_length": { "type": "number" },
+    "rhythm_score": { "type": "number", "minimum": 0, "maximum": 1 },
+    "tension_score": { "type": "number", "minimum": 0, "maximum": 1 },
+    "sample_passages": { "type": "array", "items": { "type": "string" }, "maxItems": 3 }
+  }
+}
